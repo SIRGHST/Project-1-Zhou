@@ -1,24 +1,36 @@
-//Trevaughn McGregor
-#include <iostream>     
-#include <algorithm>   
-#include <vector>    
-#include <string>   
+//Trevaughn
+#include <iostream>
+#include <fstream>
+#include<algorithm>
+#include<string>
+#include <vector>
 using namespace std;
-int main () {
 
-vector<string> Words;
-string input;
- 
-    for(int i = 0; i < Words.size(); ++){
-       getline(cin,input);
-		Words.push_back(input);    
-        reverse(Words.begin(),Words.end());
-}
-  // print out content:
-    cout << "Words contains:";
-   for (vector<string>::iterator it=Words.begin(); it!=Words.end(); ++it)
-    cout << ' ' << *it;
-    cout << '\n';
+ifstream sample("Words.txt");
 
-  return 0;
+int main(){
+	
+	int n;
+	cin >> n;
+	vector<string> list;
+	
+	getline(sample, list);
+	
+	for(int C = 1; C <= n; C++){
+	    getline(sample, list);
+	    reverse(list.begin(), list.end());
+	}
+	
+	// print out content:
+  	cout << "Vector contains: ";
+  	for (vector<string>::iterator it = list.begin(); it != list.end(); it++)
+   	cout << ' ' << *it;
+   	cout << '\n';
+
+
+	
+sample.close();	
+	
+return 0;
+
 }
