@@ -1,3 +1,4 @@
+//Trevaughn McGregor
 #include <iostream>
 using namespace std;
 
@@ -12,8 +13,11 @@ int main(){
 	for(int testcase = 1; testcase<= T; testcase++ ){
 		cin >> C;
 		cin >> I;
-	
-	
+	 
+		for(int i = 0; i < I; i++){
+			
+			cin >> arr[i];
+		}
 	
 	
 	}
